@@ -23,7 +23,7 @@ extension Store {
                     
                     observerQueue.async {
                         var state: State?
-                        observerQueue.sync {
+                        queue.sync {
                             state = pendingState
                             pendingState = nil
                         }
